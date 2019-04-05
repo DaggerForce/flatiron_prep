@@ -1,0 +1,1 @@
+course_name[0:1] = two_chars
