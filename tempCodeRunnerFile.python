@@ -1,6 +1,13 @@
+#%% Change working directory from the workspace root to the ipynb file location. Turn this addition off with the DataScience.changeDirOnImportExport setting
+import os
+try:
+	os.chdir(os.path.join(os.getcwd(), '.ipynb_checkpoints'))
+	print(os.getcwd())
+except:
+	pass
 
 #%%
-get_ipython().system('pip install plotly==3.3.0')
+#get_ipython().system('pip install plotly==3.3.0')
 
 
 #%%
@@ -10,5 +17,27 @@ import plotly
 #%%
 plotly.offline.init_notebook_mode(connected=True)
 # use offline mode to avoid initial registration
+
+
+#%%
+trace0 = {'type': 'bar', 'x': ['jack', 'jill', 'sandy'], 'y': [8, 11, 10]}
+trace0
+plotly.offline.iplot([trace0])
+
+
+#%%
+trace0 = {'type': 'bar', 'x': ['jack', 'jill', 'sandy', 'blaise'], 'y': [8, 11, 8, 13, 6, 4]}
+trace1 = {'type': 'bar', 'x': ['jack', 'jill', 'sandy', 'gob'], 'y': [4, 12, 3, 14, 8, 1]}
+
+
+plotly.offline.iplot([trace0, trace1])
+
+
+#%%
+
+
+
+#%%
+
 
 
