@@ -5,13 +5,19 @@ init_notebook_mode(connected=True)
 
 
 def output_at(list_of_terms, x_values):
-    results = []
-    x_list_map = list(range(len(x_values)))
 
-    for every_x in x_list_map:
-        results.append((list_of_terms[0][0])*(x_values[every_x]**list_of_terms[0][1])-11)
+    if type(x_values) == int:
+        result = ((list_of_terms[0][0]) * (x_values**list_of_terms[0][1])-11)
+        return result
 
-    return results
+    else:
+        results = []
+        x_list_map = list(range(len(x_values)))
+        for every_x in x_list_map:
+            results.append(
+                (list_of_terms[0][0]) * (x_values[every_x]**list_of_terms[0][1])-11)
+
+        return results
 
 
 three_x_squared_minus_eleven = [(3, 2), (-11, 0)]
