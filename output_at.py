@@ -7,10 +7,9 @@ init_notebook_mode(connected=True)
 def output_at(list_of_terms, x_values):
     results = []
     x_list_map = list(range(len(x_values)))
-    term1 = list_of_terms[0]
 
     for every_x in x_list_map:
-        results.append((term1[0])*(x_values[every_x]**term1[1])-11)
+        results.append((list_of_terms[0][0])*(x_values[every_x]**list_of_terms[0][1])-11)
 
     return results
 
